@@ -16,6 +16,10 @@ public class Car {
         this.countOfMoves = 0;
     }
 
+    public String getCarName() {
+        return carName;
+    }
+
     public int getCountOfMoves() {
         return countOfMoves;
     }

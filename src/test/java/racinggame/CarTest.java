@@ -33,4 +33,16 @@ public class CarTest {
         }
     }
 
+    @Test
+    void 자동차_여러대_우승자() {
+        try (final MockedStatic<Randoms> mockRandoms = mockStatic(Randoms.class)) {
+            mockRandoms.when(() -> Randoms.pickNumberInRange(anyInt(), anyInt()))
+                    .thenReturn(2, 6, 8);
+            Cars cars = new Cars("robin,hana,jack");
+            cars.executeOneRound();
+            cars.pickWinner();
+            assertThat(cars.pickWinner()).isEqualTo("hana,jack");
+        }
+    }
+
 }
