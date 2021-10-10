@@ -8,7 +8,7 @@ import nextstep.utils.Randoms;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 
-public class CarTest {
+public class CarsTest {
 
     @Test
     void 자동차_1대_1번_전진() {
