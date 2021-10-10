@@ -20,7 +20,7 @@ public class Car {
         return countOfMoves;
     }
 
-    public void decisionToMove() {
+    public void executeMoveOrNot() {
         if (this.isTurnToMove()) {
             this.moveForward();
         }
