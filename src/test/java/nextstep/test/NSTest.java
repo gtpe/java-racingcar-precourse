@@ -50,7 +50,7 @@ public abstract class NSTest {
      * @param args
      */
     protected void runNoLineFound(final String... args) {
-        assertThatExceptionOfType(NoSuchElementException.class).isThrownBy(
+        assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(
                 () -> subject(args)
         );
     }

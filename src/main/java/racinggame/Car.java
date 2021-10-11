@@ -8,16 +8,16 @@ public class Car {
     private static final int RANDOM_END = 9;
     private static final int NUMBER_TO_MOVE = 4;
 
-    private String carName;
+    private CarName carName;
     private int countOfMoves;
 
-    public Car(String carName) {
-        this.carName = carName;
+    public Car(String carNameStr) {
+        this.carName = new CarName(carNameStr);
         this.countOfMoves = 0;
     }
 
     public String getCarName() {
-        return carName;
+        return carName.getName();
     }
 
     public int getCountOfMoves() {
