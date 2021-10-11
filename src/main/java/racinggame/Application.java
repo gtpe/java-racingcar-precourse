@@ -5,7 +5,7 @@ import nextstep.utils.Console;
 public class Application {
 
     private String getProgressBar(int count) {
-        if(count > 0) {
+        if (count > 0) {
             return String.format("%" + count + "s", "").replace(' ', '-');
         }
         return "";
@@ -24,16 +24,24 @@ public class Application {
 
     private String inputCarNames() {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
-        String carNames = Console.readLine();
+        return Console.readLine();
+    }
+
+    private int inputNumberOfRounds() {
+        System.out.println("시도할 횟수는 몇회인가요?");
+        int numberOfRounds = Integer.parseInt(Console.readLine());
         System.out.println();
-        return carNames;
+        return numberOfRounds;
     }
 
     private void playRacingCar() {
         Cars cars = new Cars(inputCarNames());
+        int numberOfRounds = inputNumberOfRounds();
         System.out.println("실행 결과");
-        cars.executeOneRound();
-        printOneRound(cars);
+        for (int i = 0; i < numberOfRounds; i++) {
+            cars.executeOneRound();
+            printOneRound(cars);
+        }
         printWinner(cars);
     }
 

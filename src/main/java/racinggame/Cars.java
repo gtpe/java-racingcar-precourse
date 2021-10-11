@@ -40,7 +40,7 @@ public class Cars {
         for (int i = 0; i < cars.size(); i++) {
             if (cars.get(i).getCountOfMoves() == maxCountOfMoves) {
                 if (sb.length() > 0) {
-                    sb.append(",");
+                    sb.append(CAR_SEPARATOR);
                 }
                 sb.append(cars.get(i).getCarName());
             }
@@ -51,7 +51,7 @@ public class Cars {
     private int getMaxCountOfMoves() {
         int maxCountOfMoves = 0;
         for (Car car : cars) {
-            if(car.getCountOfMoves() > maxCountOfMoves) {
+            if (car.getCountOfMoves() > maxCountOfMoves) {
                 maxCountOfMoves = car.getCountOfMoves();
             }
         }

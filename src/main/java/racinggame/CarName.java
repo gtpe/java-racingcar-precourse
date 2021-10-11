@@ -15,14 +15,14 @@ public class CarName {
     }
 
     private void validateEmpty(String name) {
-        if(name == null || ("").equals(name.trim())) {
+        if (name == null || ("").equals(name.trim())) {
             System.out.println(ERROR_MESSAGE + " 이름이 입력되지 않았습니다.");
             throw new IllegalArgumentException();
         }
     }
 
     private void validateLengthLimit(String name) {
-        if(name.length() > LENGTH_LIMIT) {
+        if (name.length() > LENGTH_LIMIT) {
             System.out.println(ERROR_MESSAGE + " 이름의 길이는 " + LENGTH_LIMIT + "자 이하만 가능합니다.");
             throw new IllegalArgumentException();
         }
