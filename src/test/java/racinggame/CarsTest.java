@@ -40,7 +40,6 @@ public class CarsTest {
                     .thenReturn(2, 6, 8);
             Cars cars = new Cars("robin,hana,jack");
             cars.executeOneRound();
-            cars.pickWinner();
             assertThat(cars.pickWinner()).isEqualTo("hana,jack");
         }
     }

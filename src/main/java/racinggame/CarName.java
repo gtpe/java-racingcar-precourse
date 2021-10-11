@@ -9,6 +9,7 @@ public class CarName {
 
     public CarName(String name) {
         validateEmpty(name);
+        name = name.trim();
         validateLengthLimit(name);
         this.name = name;
     }
